@@ -9,6 +9,8 @@ builder.Services.AddSwaggerGen(); // ?? Add this
 #region DbContext Connection
 var InventoryDbContext = builder.Configuration.GetSection("ConnectionStrings:InventoryDBConnection");
 builder.Services.AddInventoryDbContext(InventoryDbContext.Value!);
+builder.Services.AddInfrastructureRegistrations();
+
 #endregion
 
 builder.Services.AddControllers();
