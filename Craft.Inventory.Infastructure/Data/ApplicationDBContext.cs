@@ -15,11 +15,11 @@ namespace Craft.Inventory.Infastructure.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
-        public DbSet<Product> products { get; set; }
-        public DbSet<Category> categories { get; set; }
-        public DbSet<Inventorry> inventories { get; set; }
-        public DbSet<Transaction> transactions { get; set; }
-        public DbSet<Order> orders { get; set; }
-        public DbSet<OrderDetail> orderDetails { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Inventorry> Inventories { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
     }
 }

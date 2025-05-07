@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Craft.Inventory.Core\Craft.Inventory.Core.csproj" />
+    <ProjectReference Include="..\Craft.Inventory.Infastructure\Craft.Inventory.Infastructure.csproj" />
+  </ItemGroup>
+
 </Project>

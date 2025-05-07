@@ -1,17 +1,15 @@
-using Craft.Inventory.Infastructure.Data;
-using Microsoft.EntityFrameworkCore;
+using Craft.Inventory.Infastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 
-#region DbContext
-builder.Services.AddDbContext<ApplicationDBContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("InventoryDbConnection"));
-});
+#region DbContext Connection
+var InventoryDbContext = builder.Configuration.GetSection("ConnectionStrings:InventoryDBConnection");
+builder.Services.AddInventoryDbContext(InventoryDbContext.Value!);
 #endregion
+
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
