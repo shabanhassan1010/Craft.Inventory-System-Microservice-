@@ -14,10 +14,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +22,13 @@
     <ProjectReference Include="..\Craft.Inventory.Infastructure\Craft.Inventory.Infastructure.csproj" />
     <ProjectReference Include="..\Craft.Inventory.Services\Craft.Inventory.Services.csproj" />
     <ProjectReference Include="..\Craft.Inventory.Shared\Craft.Inventory.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="End Points\Inventories\" />
+    <Folder Include="End Points\Transactions\" />
+    <Folder Include="End Points\Products\" />
+    <Folder Include="End Points\Orders\" />
   </ItemGroup>
 
 </Project>
